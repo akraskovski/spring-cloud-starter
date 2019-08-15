@@ -9,11 +9,11 @@ import org.springframework.web.bind.annotation.RestController;
  * The type Rest api endpoint.
  */
 @RestController
-public class RestApiEndpoint {
+public class FirstRestApiEndpoint {
 
     private final String message;
 
-    public RestApiEndpoint(@Value("${message:Config server is not working}") String message) {
+    public FirstRestApiEndpoint(@Value("${message:Config server is not working}") String message) {
         this.message = message;
     }
 

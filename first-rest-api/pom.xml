@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.github.akraskovski</groupId>
-    <artifactId>rest-api</artifactId>
+    <artifactId>first-rest-api</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>rest-api</name>
+    <name>first-rest-api</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
