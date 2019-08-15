@@ -1,13 +1,13 @@
-package com.github.akraskovski.spring.cloud.starter;
+package com.github.akraskovski.config.server;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class SpringCloudStarterApplication {
+public class ConfigServerApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(SpringCloudStarterApplication.class, args);
+        SpringApplication.run(ConfigServerApplication.class, args);
     }
 
 }
