@@ -1,8 +1,6 @@
 spring:
   application:
-    name: second-rest-api
-  profiles:
-    active: development
+    name: service-discovery
   cloud:
     config:
       uri: http://localhost:1000
