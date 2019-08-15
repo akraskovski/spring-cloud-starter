@@ -1,0 +1,14 @@
+server:
+  port: 8081
+
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/akraskovski/spring-cloud-starter
+          search-paths: configuration
+          username: ${git.username}
+          password: ${git.password}
