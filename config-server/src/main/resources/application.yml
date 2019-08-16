@@ -12,3 +12,9 @@ spring:
           search-paths: configuration
           username: ${git.username}
           password: ${git.password}
+eureka:
+  client:
+    region: default
+    registryFetchIntervalSeconds: 5
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
