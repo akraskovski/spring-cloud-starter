@@ -1,0 +1,17 @@
+spring:
+  application:
+    name: first-rest-api
+  profiles:
+    active: development
+
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka
+  instance:
+    preferIpAddress: true
+
+message2: "[NEW] This message is obtained from configuration server."
+
+server:
+  port: 8030

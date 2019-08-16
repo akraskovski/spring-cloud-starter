@@ -1,5 +1,6 @@
 package com.github.akraskovski.rest.api.endpoints;
 
+import com.netflix.discovery.EurekaClient;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -11,15 +12,21 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class FirstRestApiEndpoint {
 
-    private final String message;
+    private final EurekaClient eurekaClient;
 
-    public FirstRestApiEndpoint(@Value("${message:Config server is not working}") String message) {
-        this.message = message;
+    public FirstRestApiEndpoint(EurekaClient eurekaClient) {
+        this.eurekaClient = eurekaClient;
     }
 
     @RefreshScope
     @GetMapping("/message")
-    public String getMessage() {
+    public String getMessage(@Value("${message:Config server is not working}") String message) {
+        return message;
+    }
+
+    @RefreshScope
+    @GetMapping("/message2")
+    public String getMessage2(@Value("${message2}") String message) {
         return message;
     }
 }
